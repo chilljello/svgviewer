@@ -1,0 +1,20 @@
+{
+  "name": "svg-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "bun run dev",
+    "dev": "bun run dev-server.js",
+    "build": "bun build src/index.tsx --outdir dist --target browser --minify && node -e \"const fs=require('fs'); const html=fs.readFileSync('index.html','utf8').replace('/src/index.tsx','./index.js'); fs.writeFileSync('dist/index.html',html);\"",
+    "serve": "bun run serve-dist.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "esbuild": "^0.25.9",
+    "vite": "^7.1.4"
+  }
+}
