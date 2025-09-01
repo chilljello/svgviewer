@@ -1,0 +1,17 @@
+{
+  "name": "svgviewer-desktop",
+  "version": "1.0.0",
+  "description": "SVG Viewer Desktop Application",
+  "main": "main.js",
+  "type": "module",
+  "sciter": {
+    "window": {
+      "title": "SVG Viewer Desktop",
+      "width": 1400,
+      "height": 900,
+      "resizable": true,
+      "maximizable": true,
+      "minimizable": true
+    }
+  }
+}

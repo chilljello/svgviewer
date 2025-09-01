@@ -6,7 +6,10 @@
     "start": "bun run dev",
     "dev": "bun run dev-server.js",
     "build": "bun build src/index.tsx --outdir dist --target browser --minify && node -e \"const fs=require('fs'); const html=fs.readFileSync('index.html','utf8').replace('/src/index.tsx','./index.js'); fs.writeFileSync('dist/index.html',html);\"",
-    "serve": "bun run serve-dist.js"
+    "build-desktop": "./scripts/build-desktop.sh",
+    "test-desktop": "./scripts/test-desktop.sh",
+    "serve": "bun run serve-dist.js",
+    "desktop": "bun run build-desktop && echo 'Desktop build complete. Use Sciter.JS SDK to package.'"
   },
   "dependencies": {
     "react": "^18.2.0",
